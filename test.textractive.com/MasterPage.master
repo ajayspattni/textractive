@@ -1,0 +1,127 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="google-translate-customization" content="ab5f57913e94c02f-e00bfb1b0df9ca4a-g63d2e9d28238c5d4-d"></meta>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600" rel="stylesheet" type="text/css" />
+    <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-panels.min.js"></script>
+    <script src="js/init.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="css/skel-noscript.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-wide.css" />
+    </noscript>
+    <!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+
+    <style type="text/css">
+        #absdiv1 {
+   z-index: 0;
+   position: absolute;
+   top: 7300px;
+   left: 1025px;
+   width:300px;
+   height:300px;
+   
+}
+
+            #absdiv2 {
+   z-index: -1;
+   position: absolute;
+   top: 7100px;
+   left: 500px;
+   width:50px;
+   height:50px;
+   
+}
+
+    </style>
+    <script type="text/javascript">
+        function mouseOverImage() {
+            document.getElementById("#absdiv2").css('display', 'none');
+        }
+
+        function mouseOutImage() {
+            document.getElementById("#absdiv2").css('display', 'block');
+        }
+    </script>
+</head>
+<body >
+    <form id="form1" runat="server" >
+        <%--Header--%>
+        <div id="header" class="skel-panels-fixed" >
+            <div class="top">
+                <!-- Logo -->
+                <div id="logo">
+                    <span class="image avatar48">
+                        <img src="images/avatar.jpg" alt="" /></span>
+                    <h1 id="title">Jane Doe</h1>
+                    <%--<span class="byline">Hyperspace Engineer</span>--%>
+                    <span class="byline">Portfolio</span>
+                </div>
+                <!-- Nav -->
+                <nav id="nav">
+                    <!-- Prologue's nav expects links in one of two formats:1. Hash link (scrolls to a different section within the page) <li><a href="#foobar" id="foobar-link" class="skel-panels-ignoreHref"><span class="fa fa-whatever-icon-you-want">Foobar</span></a></li> 2. Standard link (sends the user to another page/site) <li><a href="http://foobar.tld"><span class="fa fa-whatever-icon-you-want">Foobar</span></a></li> -->
+                    <ul>
+                        <%--<li><a href="#top" id="top-link" class="skel-panels-ignoreHref"><span class="fa fa-home">Intro</span></a></li>--%>
+                        <li><a href="#top" id="top-link" class="skel-panels-ignoreHref"><span class="fa fa-home">Stories</span></a></li>
+                        <%--<li><a href="#portfolio" id="portfolio-link" class="skel-panels-ignoreHref"><span class="fa fa-th">Portfolio</span></a></li>--%>
+                        <li><a href="#portfolio" id="portfolio-link" class="skel-panels-ignoreHref"><span class="fa fa-th">Poem</span></a></li>
+                        <%--<li><a href="#about" id="about-link" class="skel-panels-ignoreHref"><span class="fa fa-user">About Me</span></a></li>--%>
+                        <li><a href="#about" id="about-link" class="skel-panels-ignoreHref"><span class="fa fa-user">Articles</span></a></li>
+                        <li><a href="#contact" id="contact-link" class="skel-panels-ignoreHref"><span class="fa fa-envelope">Contact</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="bottom">
+                <ul class="icons">
+                    <li><a href="#" class="fa fa-twitter solo"><span>Twitter</span></a></li>
+                    <li><a href="#" class="fa fa-facebook solo"><span>Facebook</span></a></li>
+                    <li><a href="#" class="fa fa-github solo"><span>Github</span></a></li>
+                    <li><a href="#" class="fa fa-dribbble solo"><span>Dribbble</span></a></li>
+                    <li><a href="#" class="fa fa-envelope solo"><span>Email</span></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <%--Content--%>
+        <div id="main">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer" style="z-index:-1">
+            <!-- Copyright -->
+            <div class="copyright" >
+                <p>Nonthing to Worry If you are with me...</p>
+                <ul class="menu">
+                    <li> <a href="#">This Website inspired by  My Lovely Parents and dedicated to them ...</a></li>
+                   <p> <li> <a href="#">Love You So Much My Dear Mummy and Dad</a></li></p>
+                </ul>
+            </div>
+            <div class="row">
+            <div id="absdiv1">
+                <span >
+                        <img src="images/caption.png" alt="" /></span>
+            </div>
+                </div>
+        </div>
+    </form>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+        }
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        
+</body>
+</html>
